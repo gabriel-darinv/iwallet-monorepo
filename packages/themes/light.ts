@@ -1,0 +1,19 @@
+export default {
+  title:'light',
+  colors:{
+    primary:'#5461C8', 
+    secondary:'#323E9A', 
+    tertiary:'#1E255C', 
+    quaternary:'#8690D8', 
+    five:'#B6BCE7', 
+    negative:'#C85663',
+    positive:'#63C856',
+    background:'#DBDEF3', 
+    background2:'#E7E9F7', 
+    background3:'#F3F4FB', 
+    text:'#0A0C1F', 
+    text2:'#7E829F',
+    white:'#fefeff',
+    black:'#0a0a0f',
+  }
+};

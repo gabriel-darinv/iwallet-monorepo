@@ -1,0 +1,17 @@
+{
+  "name": "iwallet",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "author": "gabriel-darinv <51793585+gabriel-darinv@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.0.3",
+    "@iwallet/eslint-config":"*"
+  }
+}

@@ -1,0 +1,1 @@
+const config = require('@iwallet/eslint-config')
