@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 
 import Login from '../pages/auth/Login'
 import Register from '../pages/auth/Register'
+import AuthPage from '../components/AuthPage'
 
 const AuthRoutes: React.FC = () => {
   return (

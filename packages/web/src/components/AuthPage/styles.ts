@@ -1,32 +1,33 @@
 import styled from 'styled-components';
 
 export const Page = styled.div`
-  width:100%;
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
 `;
 
 export const Container = styled.div`
-  width:35rem;
-  min-height:50%;
-  background: #c3c3cf;
-  margin:1rem;
-  padding:2rem;
-  display:flex;
-  flex-direction:column;
-  border-radius:0.5rem;
-`;
+  position: absolute;
+  width: 45rem;
+  height: 100%;
+  right: 0;
+  top: 0;
 
-export const Form = styled.form`
-  width:100%;
-  height:100%;
+  background: #FFFFFF;
+
+  border: 2px solid #D3E2E5;
+  box-sizing: border-box;
+
   display:flex;
-  flex-direction:column;
   align-items:center;
   justify-content:center;
-  margin-top:2rem;
+`;
+
+export const LoginContainer = styled.div`
+  width:60%;
+  /* height:60%; */
+  /* border:1px solid red; */
 `;
 
 export const Title = styled.div`
@@ -34,12 +35,24 @@ export const Title = styled.div`
   height:5rem;
   display: flex;
   align-items:center;
-  justify-content:center;
-  margin-bottom:auto;
+  padding: 0 2rem;
+  /* justify-content:center; */
+  /* margin-bottom:auto; */
 
   >h1 {
-    font-size:3rem;
+    font-size:2rem;
   }
+`;
+
+export const Form = styled.form`
+  width:100%;
+  /* height:auto; */
+  margin-top:2rem;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
 `;
 
 export const Label = styled.label`
@@ -52,10 +65,16 @@ export const Label = styled.label`
 export const Input = styled.input`
   width:100%;
   height:3rem;
-  background: #fdfdff;
-  border-radius:0.3rem;
+  
   margin-bottom:3rem;
   padding:1rem;
+
+  border-radius:0.3rem;
+
+  background: #dddddf;
+
+  font-size: 1.5rem;
+  font-weight: 400;
 `;
 
 export const ButtonContainer = styled.div`
@@ -63,7 +82,11 @@ export const ButtonContainer = styled.div`
   width:100%;
   display: flex;
   align-items:center;
-  justify-content:space-around;
+  justify-content:space-between;
+
+  > :first-child {
+    background: #83808d;
+  }
 
   > a {
     width:45%;
@@ -75,16 +98,15 @@ export const ButtonContainer = styled.div`
 
     text-decoration:none;
     color:#fefefe;
-    background: #83808d;
+    background: #c060df;
   }
 `;
 
 export const Button = styled.button`
-  width:45%;
+  width:48%;
   height:4.5rem;
   text-decoration:none;
   color:#fefefe;
   border-radius:0.3rem;
   background:#c060df;
 `;
-

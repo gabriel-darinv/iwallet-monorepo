@@ -1,25 +1,46 @@
-import React from 'react'
-import AuthForm, { FormInput } from '../../../components/AuthForm'
-// import {  } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Register: React.FC = () => {
+import AuthPage from '../../../components/AuthPage';
+import { Button, ButtonContainer, Form, Input, Label, LoginContainer, Title } from '../../../components/AuthPage/styles';
 
-  function handleRegister(){
-    alert("Register")
+import { useAuth } from '../../../contexts/auth';
+
+const Login: React.FC = () => {
+  const { signed, user, getSignIn } = useAuth();
+
+  console.log(signed)
+  console.log(user)
+  
+  function handleRegistration() {
+    alert('registro ok')
+    // getSignIn()
   }
 
   return (
-    <AuthForm 
-      title="Register"
-      action={handleRegister} 
-    >
-      <FormInput label="Name" placeholder="" />
-      <FormInput label="Surname" placeholder="" />
-      <FormInput label="Email" placeholder="example@iwallet.com" />
-      <FormInput label="Password" placeholder="***" />
-      <FormInput label="Repeat password" placeholder="***" />
-    </AuthForm>
-  )
+    <AuthPage>
+        <LoginContainer>
+          <Title><h1>Registre-se</h1></Title>
+          <Form>
+            <Label>e-mail</Label>
+            <Input />
+            <Label>nome</Label>
+            <Input />
+            <Label>sobrenome</Label>
+            <Input />
+            <Label>senha</Label>
+            <Input />
+            <Label>repita a senha</Label>
+            <Input />
+            <ButtonContainer>
+              <Link to="/">Login</Link>
+              {/* <Link to="/">Login</Link> */}
+              <Button onClick={handleRegistration}>Login</Button>
+            </ButtonContainer>
+          </Form>
+        </LoginContainer>
+    </AuthPage>
+  );
 }
 
-export default Register
+export default Login;

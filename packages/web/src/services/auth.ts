@@ -1,5 +1,13 @@
-export function signIn() {
-  return new Promise((require, resolve) => {
+interface Response {
+  token: string;
+  user:{
+    name:string;
+    email:string;
+  }
+}
+
+export function signIn(): Promise<Response> {
+  return new Promise(resolve => {
     setTimeout(() => {
       resolve({
         token: '2903uj23ij203urijijw',
@@ -8,18 +16,6 @@ export function signIn() {
           email: 'gabrieldarin@hotmail.com'
         }
       })
-    }, 2000)
+    }, 1000)
   })
 }
-
-// return new Promise(resolve => {
-//   setTimeout(() => {
-//     resolve({
-//       token: '2903uj23ij203urijijw',
-//       user: {
-//         name: 'Gabriel',
-//         email: 'gabrieldarin@hotmail.com'
-//       }
-//     });
-//   },2000);
-// });

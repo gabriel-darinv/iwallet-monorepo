@@ -1,5 +1,5 @@
-import dark from './dark';
-import light from './light';
+import _dark from './dark';
+import _light from './light';
 
-export const Dark = dark;
-export const Light = light;
+export const dark = _dark;
+export const light = _light;
